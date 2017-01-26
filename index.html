@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+        "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">	
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Warrior Cats Name Generator</title>
+	<meta name="description" content="A name generator for Warrior Cats OCs" />
+	
+	
+	
+	
+	<script type="text/javascript">	
+		function generator(){
+			
+			var wordlist1 = ["Blue","Red","Spotted","Lion","Tiger","White","Dark","Long","Running","Willow","Mouse","Dust","Gray","Raven","Sand","Fire","Frost","Brindle","Golden","Speckle","Half","Small","Patch","Dapple","Broken","One","Black","Stumpy","Boulder","Claw","Night","Dawn","Bright","Ash","Tall","Crooked","Oak","Yellow","Swift","Bracken","Cinder","Wet","Little","Brown","Dead","Bark","Mud","Web","Torn","Morning","Leopard","Heavy","Stone","Shade","Loud","Silver","Cloud","Bright","Thorn","Crow","Misty","Fern","Tawny","Moss","Russet","Cedar","Jagged","Rowan","Gorse","Dawn","Bramble","Lost","Feather","Storm","Rain","Soot","Sorrel","Squirrel","Leaf","Spider","Shrew","Smoke","Talon","Crow","Moth","Hawk","Weasel","Thistle","Robin","Oat","Vole","Swallow","Splash","Owl","Rush","Beech","Reed","Ripple","Ivy","Birch","Berry","Hazel","Honey","Poppy","Snow","Kestrel","Hare","Heather","Breeze","Minnow","Pounce","Pebble","Jay","Holly","Ice","Brook","Fox","Rose","Toad","Sneeze","Mallow","Prickle","Beetle","Petal","Grass",
+                                         "Olive","Scorch","Flame","Dew","Ant","Ember","Sun","Mint","Nettle","Otter","Pine","Dusk","Copper","Briar","Bumble","Blossom","Kink","Rat","Snake","Sedge","Dove","Ferret","Starling","Whisker","Furze","Hollow","Trout","Mossy","Cherry","Mole","Lily","Seed","Apple","Amber","Lark","Spark","Alder","Sleek","Juniper","Needle","Yarrow","Wasp","Strike","Bee","Clover","Puddle","Slate","Slight","Hoot","Curl","Pod","Heron","Shimmer","Lizard","Haven","Perch","Lake","Spike","Twig","Violet","Soft","Goose","Maple","Crouch","Stoat","Plum","Rabbit","Parsley","Tiny","Sharp","Echo","Doe","Mumble","Rook","Adder","Rock","Stag","Flash","Daisy","Fallow","Hound","Sage","Hail","Deer","Bloom","Thrush","Freckle","Eel","Sloe","Midge","Milk","Flint","Tangle","Acorn","Snail","Tansy","Fawn","Buzzard","Aspen","Timber","Shell","Marsh","Pike","Fuzzy","Weed","Finch","Blizzard","Pool","Frog","Wooly","Hickory","Mist","Rye","Meadow","Flail","Arch","Bird","Sparrow","Short","Sky","Ragged","Lichen","Newt"];
+			
+			var wordlist2 = ["tail","leaf","heart","claw","storm","stripe","wind","pelt","fur","face","flower","ear","eye","foot","nose","cloud","fang","poppy","whisker","belly","stream","pool","throat","brook","tooth","step","wing","frost","flight","leg","feather","fall","bird","mist","scar","water","spring","spots","blaze","fern","shine","leap","petal","willow","strike","light","bush","tuft","moon","song","shade","splash","berry","pounce","toe","breeze","thistle","snout","dapple","wish","talon","dusk","burr","snow","runner","dawn","gorse","mouse","slip","skip","spot","flame","thorn","sky","stem"]
+
+			var randomNumber1 = parseInt(Math.random() * wordlist1.length);
+			var randomNumber2 = parseInt(Math.random() * wordlist2.length);
+			var name = wordlist1[randomNumber1] + wordlist2[randomNumber2];			
+			
+			if(document.getElementById("result")){
+				document.getElementById("placeholder").removeChild(document.getElementById("result"));
+			}
+			var element = document.createElement("div");
+			element.setAttribute("id", "result");
+			element.appendChild(document.createTextNode(name));
+			document.getElementById("placeholder").appendChild(element);
+		}		
+	</script>
+	
+	<style type="text/css">
+		body{font-family: arial, serif;}
+		#wrapper{border-left:1px solid #cccccc;border-right:1px solid #cccccc;margin:0 auto;padding: 0 20px;width: 700px}
+		#generator{background:#e9f3f6;border:1px solid #cccccc;margin:30px 0;font-size:28px;font-weight:bold;padding:50px 0 20px;text-align:center;-moz-border-radius: 5px;-webkit-border-radius: 5px;}
+		#generator input{font-size:16px;font-weight:normal;margin-top: 30px}
+		#footer{font-size: 10px; color: #999; margin: 30px 0 0 0;}
+		#footer a{color:#999}
+	</style>
+	
+	
+</head>
+<body onload="generator()">
+	<div id="wrapper">
+		
+		<h1>Warriors Name Generator</h1>
+		<p>Comprised of most prefixes and suffixes that appear in all of the novels, this generator will help you find the perfect name for your character.
+		</p>
+		
+		<div id="generator" >
+			<div id="placeholder"></div>
+			<input type="button" value="Generate" onclick="generator()" />		
+		</div>
+	</div>
+</body>
+</html>
